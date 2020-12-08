@@ -1,0 +1,650 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background: #fff;
+    color: #555;
+    font-family: "Lato",'Haettenschweiler' ;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix::after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.row{
+    max-width: 1540px;
+    margin: 0;
+    /* padding: 0 auto 0 auto;  top right buttom left*/
+    /*shortcut below:*/
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+
+
+/*To ensure whitespace is optimized  */
+section{
+    padding: 80px 0;
+}
+
+.box{      /*for paragraph*/
+    padding: 1%;                /* for spacing between each box*/   
+}
+
+.box p{
+    line-height: 145%; 
+    font-size: 95%;
+}
+
+
+/*header */
+header {
+    background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url('img/cover-photo.jpg');
+    background-size: cover;                        /*ensures the image fits the entire screen */
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.header-content{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*
+
+.logo-when-sticky{
+    height: 60px;
+    width: auto;
+    float: left;
+    display: none;
+    margin-left: 60px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}   */
+
+/*  Main nav  */
+
+.main-nav {
+    float: right;   
+    list-style: none;
+    margin-top: 50px; 
+    }
+
+/* to change the way navbar list are displayed below, so they can lay side by side with a margin: */
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    list-style: none;
+    
+}
+
+.main-nav li:last-child{margin-right: 40px;}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+   padding: 8px 0;
+   text-decoration: none;
+   text-transform: capitalize;
+   color: #fff;
+   font-size: 19px;
+   font-weight: 300;
+   font-weight: bolder;
+   border-bottom: transparent;
+   -webkit-transition: border-bottom;
+   transition: border-bottom 0.2s;    
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+}
+
+/* mobile navi */
+.mobile-nav-icon{
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none ;
+    
+}
+
+.mobile-nav-icon i{
+    font-weight: 500%;
+    color: #fff;
+}
+
+/* Sticky nav 
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.98); 
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.sticky, .main-nav li a:link,
+.sticky,.main-nav li a:visited {
+   padding: 15px 0;  
+   color: #555;
+   font-weight: bold;
+   
+}
+
+.sticky, .main-nav {
+    float: right;   
+    list-style: none; 
+    }
+
+.sticky, .logo{display: block;}
+
+.main-nav {margin-top: 15px;}     */
+
+/* HEADINGS*/
+
+h1,               /*what h1 & h2 have in common*/
+h2,
+h3  {   
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+h1{
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    word-spacing: 3px;
+    font-size: 250%;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2x;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+
+}
+
+h2::after{     /* to create a little yellw line btw H2 and the text, we use CSS pseudo property*/
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: "";     /*always use this property, in this case we dont want any specifics */
+    width: 100px;
+    margin: 0 auto;     /* top & bottom 0, left & right auto*/
+    margin-top: 30px;
+}
+
+
+/* PARAGRAPHS*/
+.long-copy {
+    line-height: 145%;           /*recall range should be btw 120 & 145%  */
+    width: 70%;
+    margin: 0 15%; 
+}
+
+.features-section ,.long-copy{
+    margin-bottom: 30px;
+}
+
+/*  ICONS   */
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+/* LINKS */
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/*BUTTONS*/
+.btn:link, 
+.btn-visited,
+input[type=submit] {                  /* styling for the button text */
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;    
+}
+
+
+/* styling for the button background & border*/
+.btn-bright:link, 
+.btn-bright:visited,
+input[type=submit] {     /* here we got our color layout from https://flatuicolors.com */ 
+   background-color: #e67e22;
+   border: 3px solid  #e67e22; 
+   color: #fff;
+   margin-right: 15px;  
+}
+
+.btn-dim:link,
+.btn-dim:visited {
+    border: 1px solid #e67e22;
+    color:#e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active
+      {background-color: #9d4414;      
+}
+
+.btn-bright:hover, 
+.btn-bright:active  {     /* here we got our color layout from https://0to255.com */ 
+    border: 1px solid #9d4414;
+}
+
+.btn-dim:hover,
+.btn-dim:active{
+    border:1px solid #9d4414;
+    color: #fff;
+}
+
+
+.features-section{
+    padding: 3rem;
+    justify-items: center;
+}
+
+/* MEAL IMAGE SECTION  */
+
+.meals-section{
+    padding: 0;
+}
+
+.meal-showcase{
+    list-style: none;
+    width: 100%;
+}
+
+.meal-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);     /*Special CSS3 effect that allows us to zoom in when we hover around a photo*/
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+
+/* HOW IT WORKS SECTION */
+
+.how-it-works{
+    background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding: 3%;
+    margin-top: 30px;
+}
+
+.fone-screen{
+    width: 40%;
+}
+
+.steps{
+    margin-bottom: 50px;
+}
+
+.steps:last-of-type{     /*last parent element*/
+    margin-bottom: 80px;
+}
+
+.steps div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    display: block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 120%;
+    float: left;
+    margin-right: 25px;
+}
+
+.btn-app:link{border: 0;}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+/* city section*/
+  
+.box img{
+   width: 100%;
+   height: auto;
+   margin-bottom: 15px;    
+}
+
+.city-feature{
+    margin-bottom: 5px;    
+}
+
+.icon-small{
+    font-size: 150%;
+    display: inline-block;
+    color: #e67e22;
+    width: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    /*Align text/icons secret */
+    line-height: 150%;
+    vertical-align: middle; 
+    margin-top: 6px;     
+}
+
+/*a:link,
+a:active ,.twitter-link{
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+}
+
+*/
+
+
+/* TESTIMONIALS SECTION */
+.testimonial{
+    background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),  url('img/back-customers.jpg');
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;    /*background image becomes sticky */
+} 
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+}
+
+/*to add quotation mark*/
+blockquote::before{
+    content: "\201C";           /* to add quotation mark, we use iso character....  csstricks.com/snippets/html/glyphs*/
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+    margin-top: 40px;
+}
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+/* PRICING SECTIONS */
+
+.plans{
+    background: #f4f4f4;
+}
+
+.plan-box{
+    background: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin: 5%;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+
+.plan-box div{                /*line divider for the 3 divs- premium, list and link */
+   padding: 15px;
+   border-bottom: 1px solid #e8e8e8;
+
+}
+
+.plan-box div:last-child{    /* add the border top left and right radius that was gone*/
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:first-child{
+    background: #fcfcfc
+}
+
+.plan-box div:last-child{       /*centralize sign up button */
+    text-align: center;
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:  #e67e22;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+}
+
+.plan-price span{
+    font-size: 30%;
+    font-weight:300;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+}
+
+
+/*Contact form */
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{      /*to get rid of the black outline that displays whenever we select any form element*/
+    outline: none;
+}
+
+/*FOOTER SECTION*/
+
+footer{
+    background-color: #333;
+    padding: 50px;
+    
+}
+
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+
+}
+
+.footer-nav li, 
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child, 
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transform: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active{
+    color: #fff;
+}
+
+footer p{
+    color: #fff;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 30px;
+}
+
+/* social media links hover color can be dowloaded from  wwww.designpieces.com  */
+
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-instagram,
+.ion-social-googleplus{
+    transition: color 0.2s ease-in-out;
+}
+
+.ion-social-facebook:hover{
+    color: #3b5998
+}
+
+.ion-social-twitter:hover{
+    color: #00aced;
+}
+
+.ion-social-instagram:hover{
+    color: #517fa4;
+}
+
+.ion-social-googleplus:hover{
+    color: #dd4b39;
+}
