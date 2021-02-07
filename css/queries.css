@@ -40,10 +40,12 @@
     
     .contact-form{width: 90%;}
 
-    .btn-app img{margin-top: 30px;
+    .btn-app img{
+        height: 35px;
         display: inline-block;
-
-}
+        margin:20px 0px;
+        width: auto;
+    }
 }
 
 /* small phones to small tablets:  from 481px to 767px */
@@ -60,11 +62,8 @@
 
     .col{width: 100;}
    /* .main-nav{display: none;   hides the entire navigation} */
-
    
    }
-
-
 
     .long-copy{   
         width: 100%;
@@ -78,9 +77,14 @@
 
     .steps{margin-bottom: 20px;}
     .steps:last-of-type{margin-bottom: 20px;}
-    .btn-app img{margin-left: 30px;
-                 display: inline-block;
     
+ 
+
+    .btn-app img{
+        height: 35px;
+        display: inline-block;
+        margin:20px 0px;
+        width: auto;
     }
 
     .steps div {     
@@ -96,25 +100,86 @@
 
 /* small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
-    .meal-showcase li{width: 100%;      
+    .header-content{
+        font-size: 12px;
+    }
+
+    .meal-showcase li{width: auto;
+                      padding: 3px 10px;
+                    display: block;      
     }
     .contact-form{width: 100%;}
-
-    .mobile-nav-icon{display: block;}
+  
+   .mobile-nav-icon{display: block;}
    .main-nav{float: left;
-             margin-top: 24px;
-             margin-left: 25px;
+             margin-top: 30px;
+             margin-left: 5px;           
 }
-   .main-nav li { display: block;}
+   .main-nav li { display: none;}
 
-   .main-nav li a:link
+   .main-nav li a:link,
    .main-nav li a:visited {
        display: block;
        border: 0;
+       padding: 3px 0;
+       font-size: 100%;
    }
    .logo{display: none;
          height: 50px;   
 
 }
+
+
+
+
+.btn-app img{
+    display: inline-block;
+    margin:20px 0px;
+    width: auto;
+    text-align: center;
+}
+.btn-app{
+    text-align: center;
 }
 
+footer{
+    background-color: #333;
+    padding: 10px;
+    
+}
+
+.social-links{
+    list-style: none;
+    float:inherit;
+    margin-top: 30px;
+
+}
+
+.plans-center{
+    text-align: center;
+}
+
+blockquote{
+    margin: 25px 0;
+
+}
+
+#btn-mobile{
+    text-align: center;
+}
+
+.features-section{
+    padding: 0;
+    justify-items: center;
+}
+
+.icon-big, .box h3{
+  text-align: center;
+}
+
+.testimonials div{
+  width: 100%;
+  display: block;
+}
+
+}
