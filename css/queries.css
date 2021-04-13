@@ -7,7 +7,6 @@
         padding: 0 2%;        
     }
     .row{ padding: 0 2%;}
-    
 }
 
 
@@ -16,7 +15,7 @@
     body{font-size: 18px; }
     section{padding: 60px 0;}
     .header-content{ width: fit-content;}
-    .long-copy{   
+    .long-copy{ 
                width: 100%;
                margin: 0 0%; 
     }
@@ -124,7 +123,7 @@
        font-size: 100%;}
    .logo{display: block;
          height: 60px;
-         margin-left: 0;
+         margin-left: 10px;
         
            
 }

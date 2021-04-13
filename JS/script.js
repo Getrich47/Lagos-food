@@ -1,16 +1,7 @@
 
 
 $(document).ready(function() {
-      /* For the sticky navigation */
-       $('.js--section-features').waypoint(function(direction) {
-          if (direction == "down") {
-              $('nav').addClass('sticky');
-              } else {
-                  $('nav').remove.Class('sticky');
-              }
-            },{
-                offset: '60px;'   
-            });
+      
 
 
             /* Mobile navigation */
