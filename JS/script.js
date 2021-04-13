@@ -1,4 +1,4 @@
-/*
+
 
 $(document).ready(function() {
       /* For the sticky navigation */
@@ -9,18 +9,28 @@ $(document).ready(function() {
                   $('nav').remove.Class('sticky');
               }
             },{
-                offset: '60px;'
+                offset: '60px;'   
             });
 
 
-            /* Scroll on buttons
-            var waypoint = new Waypoint({
-                element: document.getElementById('px-offset-waypoint'),
-                handler: function(direction) {
-                  notify('I am 20px from the top of the window')
-                },
-                offset: 20 
-              })   
+            /* Mobile navigation */
+    $('.js--nav-icon').click(function() {      
+      var nav = $('.js--main-nav');
+      var icon = $('.js--nav-icon i');
+      
+      nav.slideToggle(200);
+      
+      if (icon.hasClass('ion-navicon-round')) {
+          icon.addClass('ion-close-round');
+          icon.removeClass('ion-navicon-round');
+      } else {
+          icon.addClass('ion-navicon-round');
+          icon.removeClass('ion-close-round');
+      }        
+  });
+
+
+
+            
 });
 
-*/
